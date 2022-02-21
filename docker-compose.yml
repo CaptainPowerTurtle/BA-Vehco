@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  vehco.consumer:
+    image: ${DOCKER_REGISTRY-}vehcoconsumer
+    ports:
+    - "61616"
+    scale: 4
+    build:
+      context: .
+      dockerfile: Vehco\Dockerfile
